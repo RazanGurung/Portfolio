@@ -12,7 +12,7 @@ export const personalInfo = {
 export const metrics = {
   experience: "4+ years",
   projects: "10+ projects",
-  certifications: "3 certifications",
+  certifications: "3+ certifications",
   impact: "Enterprise scale"
 }
 
