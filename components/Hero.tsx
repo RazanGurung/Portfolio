@@ -54,7 +54,7 @@ export default function Hero() {
           <Card className="lg:sticky lg:top-24 animate-slide-in-left">
             <CardContent className="p-6 space-y-6">
               <div className="text-center space-y-2">
-                <div className="w-24 h-24 bg-gradient-to-br from-primary to-primary/60 rounded-full mx-auto flex items-center justify-center text-2xl font-bold text-primary-foreground">
+                <div className="w-32 h-32 bg-gradient-to-br from-primary to-primary/60 rounded-full mx-auto flex items-center justify-center text-3xl font-bold text-primary-foreground">
                   {personalInfo.name.split(' ').map(n => n[0]).join('')}
                 </div>
                 <h3 className="font-semibold text-lg">{personalInfo.name}</h3>
@@ -76,7 +76,7 @@ export default function Hero() {
                 <Button 
                   variant="outline" 
                   className="w-full gap-2 justify-start"
-                  onClick={() => window.open(`mailto:${personalInfo.email}`, '_blank')}
+                  onClick={() => window.open(`mailto:${personalInfo.email}`, '_blank', 'noopener,noreferrer')}
                 >
                   <Mail className="h-4 w-4" />
                   Email
@@ -84,7 +84,7 @@ export default function Hero() {
                 <Button 
                   variant="outline" 
                   className="w-full gap-2 justify-start"
-                  onClick={() => window.open(personalInfo.linkedin, '_blank')}
+                  onClick={() => window.open(personalInfo.linkedin, '_blank', 'noopener,noreferrer')}
                 >
                   <Linkedin className="h-4 w-4" />
                   LinkedIn
@@ -92,7 +92,7 @@ export default function Hero() {
                 <Button 
                   variant="outline" 
                   className="w-full gap-2 justify-start"
-                  onClick={() => window.open(personalInfo.github, '_blank')}
+                  onClick={() => window.open(personalInfo.github, '_blank', 'noopener,noreferrer')}
                 >
                   <Github className="h-4 w-4" />
                   GitHub
@@ -110,3 +110,5 @@ export default function Hero() {
     </section>
   )
 }
+
+

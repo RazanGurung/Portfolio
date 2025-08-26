@@ -91,6 +91,9 @@ export const experience = [
     highlights: [
       "Led deployment of AI/ML solutions into production environments on AWS and Kubernetes",
       "Built real-time data processing and analytics pipelines with Spark and Kafka",
+      "Improved model accuracy by 25% through advanced feature engineering and ensemble methods",
+      "Led deployment of AI/ML solutions into production environments on AWS and Kubernetes",
+      "Built real-time data processing and analytics pipelines with Spark and Kafka",
       "Improved model accuracy by 25% through advanced feature engineering and ensemble methods"
     ]
   },
@@ -101,7 +104,10 @@ export const experience = [
     highlights: [
       "Developed ML pipelines and NLP models that improved predictive accuracy by 30%",
       "Collaborated cross-functionally to translate business problems into ML solutions",
-      "Implemented MLOps practices reducing model deployment time by 50%"
+      "Implemented MLOps practices reducing model deployment time by 50%",
+      "Developed ML pipelines and NLP models that improved predictive accuracy by 30%",
+      "Collaborated cross-functionally to translate business problems into ML solutions",
+      "Implemented MLOps practices reducing model deployment time by 50%",
     ]
   },
   {
@@ -111,7 +117,10 @@ export const experience = [
     highlights: [
       "Built data visualization dashboards serving 100+ stakeholders",
       "Automated reporting processes saving 15 hours/week of manual work",
-      "Performed statistical analysis and A/B testing for product optimization"
+      "Performed statistical analysis and A/B testing for product optimization",
+      "Developed ML pipelines and NLP models that improved predictive accuracy by 30%",
+      "Collaborated cross-functionally to translate business problems into ML solutions",
+      "Implemented MLOps practices reducing model deployment time by 50%",
     ]
   }
 ]

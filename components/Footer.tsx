@@ -50,7 +50,7 @@ export default function Footer() {
                   key={link.name}
                   variant="ghost"
                   size="icon"
-                  onClick={() => window.open(link.url, '_blank')}
+                  onClick={() => window.open(link.url, '_blank', 'noopener,noreferrer')}
                   aria-label={link.label}
                   className="hover:text-primary transition-colors"
                 >

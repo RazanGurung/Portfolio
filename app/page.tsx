@@ -8,10 +8,14 @@ import Experience from '../components/Experience'
 import Skills from '../components/Skills'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
-import InteractiveBackground from '../components/InteractiveBackground'
-import FloatingElements from '../components/FloatingElements'
+// import InteractiveBackground from '../components/InteractiveBackground'
+// import FloatingElements from '../components/FloatingElements'
 import { Button } from '../components/ui/button'
 import { ArrowUp } from 'lucide-react'
+import dynamic from 'next/dynamic'
+const InteractiveBackground = dynamic(() => import('../components/InteractiveBackground'), { ssr: false })
+const FloatingElements = dynamic(() => import('../components/FloatingElements'), { ssr: false })
+
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false)

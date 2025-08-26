@@ -14,11 +14,20 @@ export const metadata: Metadata = {
     description: 'Data Scientist and ML Engineer specializing in AI-driven solutions and production ML systems.',
     type: 'website',
     locale: 'en_US',
+    images: [
+      {
+        url: '/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Rajan Gurung Portfolio',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Rajan Gurung - Data Scientist & ML Engineer',
     description: 'Data Scientist and ML Engineer specializing in AI-driven solutions and production ML systems.',
+    images: ['/og.png'],
   },
   robots: {
     index: true,

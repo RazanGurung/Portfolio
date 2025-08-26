@@ -72,7 +72,7 @@ export default function Projects() {
                   variant="outline" 
                   size="sm" 
                   className="gap-1"
-                  onClick={() => window.open(project.repoLink, '_blank')}
+                  onClick={() => window.open(project.repoLink, '_blank', 'noopener,noreferrer')}
                 >
                   <Github className="h-3 w-3" />
                   Code
@@ -80,7 +80,7 @@ export default function Projects() {
                 <Button 
                   size="sm" 
                   className="gap-1"
-                  onClick={() => window.open(project.caseStudyLink, '_blank')}
+                  onClick={() => window.open(project.caseStudyLink, '_blank', 'noopener,noreferrer')}
                 >
                   <ExternalLink className="h-3 w-3" />
                   Case Study
@@ -93,3 +93,5 @@ export default function Projects() {
     </section>
   )
 }
+
+

@@ -87,7 +87,7 @@ export default function Contact() {
                 <Button 
                   variant="outline" 
                   className="w-full justify-start gap-3"
-                  onClick={() => window.open(personalInfo.linkedin, '_blank')}
+                  onClick={() => window.open(personalInfo.linkedin, '_blank', 'noopener,noreferrer')}
                 >
                   <Linkedin className="h-4 w-4" />
                   LinkedIn Profile
@@ -95,14 +95,14 @@ export default function Contact() {
                 <Button 
                   variant="outline" 
                   className="w-full justify-start gap-3"
-                  onClick={() => window.open(personalInfo.github, '_blank')}
+                  onClick={() => window.open(personalInfo.github, '_blank', 'noopener,noreferrer')}
                 >
                   <Github className="h-4 w-4" />
                   GitHub Portfolio
                 </Button>
                 <Button 
                   className="w-full justify-start gap-3"
-                  onClick={() => window.open(`mailto:${personalInfo.email}`, '_blank')}
+                  onClick={() => window.open(`mailto:${personalInfo.email}`, '_blank', 'noopener,noreferrer')}
                 >
                   <Mail className="h-4 w-4" />
                   Send Email

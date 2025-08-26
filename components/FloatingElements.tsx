@@ -10,15 +10,15 @@ export default function FloatingElements() {
     { Icon: Cpu, delay: '2s', position: 'bottom-1/4 left-1/4', message: 'Deep Learning' },
     { Icon: BarChart3, delay: '1.5s', position: 'bottom-1/3 right-1/3', message: 'Analytics' },
     { Icon: GitBranch, delay: '0.5s', position: 'top-1/2 left-1/2', message: 'MLOps' },
-    { Icon: Zap, delay: '2.5s', position: 'top-2/3 right-1/5', message: 'Performance' },
+    { Icon: Zap, delay: '2.5s', position: 'top-2/3 right-1/4', message: 'Performance' },
   ]
 
   return (
     <div className="fixed inset-0 -z-0 overflow-hidden">
       {/* Animated gradient orbs */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-3xl animate-pulse pointer-events-none"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-green-500/10 to-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000 pointer-events-none"></div>
-      <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl animate-pulse delay-2000 pointer-events-none"></div>
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-full blur-3xl animate-pulse pointer-events-none"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-green-500/5 to-blue-500/5 rounded-full blur-3xl animate-pulse delay-1000 pointer-events-none"></div>
+      <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-full blur-3xl animate-pulse delay-2000 pointer-events-none"></div>
 
       {/* Floating tech icons */}
       {elements.map((element, index) => (

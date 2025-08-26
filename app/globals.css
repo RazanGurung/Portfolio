@@ -4,6 +4,8 @@
 
 @layer base {
   :root {
+    --primary: 217 91% 60%; /* ~#3b82f6 */
+    --primary-foreground: 210 40% 98%;
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;
@@ -67,4 +69,14 @@
 .animate-on-scroll.animate {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-pulse,
+  .animate-dash,
+  .animate-dash-reverse,
+  .animate-bounce-slow,
+  .animate-spin-slow {
+    animation: none !important;
+  }
 }
