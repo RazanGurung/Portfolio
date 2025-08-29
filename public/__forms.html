@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head><meta charset="utf-8" /></head>
+  <body>
+    <!-- Hidden static form so Netlify detects and provisions the "contact" form -->
+    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="contact" />
+
+      <!-- fields must exist here so Netlify knows their names -->
+      <input name="name" />
+      <input name="email" />
+      <input name="subject" />
+      <textarea name="message"></textarea>
+
+      <!-- Honeypot field (same name you’ll use in the React form) -->
+      <input name="bot-field" />
+    </form>
+  </body>
+</html>
