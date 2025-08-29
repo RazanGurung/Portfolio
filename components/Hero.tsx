@@ -6,6 +6,18 @@ import { Download, Mail, Github, Linkedin, MapPin, CheckCircle } from 'lucide-re
 import { personalInfo, metrics } from '../data/portfolio'
 
 export default function Hero() {
+  const downloadResume = () => {
+    const link = document.createElement('a')
+    link.href = '/resume/rajan_gurung_resume.pdf'
+    link.download = 'Rajan-Gurung-Data-Scientist-Resume.pdf'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
+  const scrollToContact = () => {
+  const element = document.getElementById('contact')
+  element?.scrollIntoView({ behavior: 'smooth' })
+  }
   return (
     <section id="hero" className="py-20 bg-gradient-to-br from-background to-muted/50">
       <div className="container mx-auto px-4">
@@ -39,11 +51,12 @@ export default function Hero() {
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 pt-4">
-              <Button size="lg" className="gap-2">
+              <Button size="lg" className="gap-2" onClick={downloadResume}>
                 <Download className="h-4 w-4" />
-                Download Resume
+                 Download Resume
               </Button>
-              <Button variant="outline" size="lg" className="gap-2">
+
+              <Button variant="outline" size="lg" className="gap-2" onClick={scrollToContact}>
                 <Mail className="h-4 w-4" />
                 Get In Touch
               </Button>
@@ -99,9 +112,9 @@ export default function Hero() {
                 </Button>
               </div>
 
-              <Button className="w-full gap-2">
+              <Button className="w-full gap-2" onClick={downloadResume}>
                 <Download className="h-4 w-4" />
-                Download Resume
+                 Download Resume
               </Button>
             </CardContent>
           </Card>

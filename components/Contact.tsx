@@ -5,6 +5,7 @@ import { Input } from './ui/input'
 import { Textarea } from './ui/textarea'
 import { Mail, Linkedin, Github, MapPin, Send, CheckCircle } from 'lucide-react'
 import { personalInfo } from '../data/portfolio'
+import emailjs from '@emailjs/browser'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -16,26 +17,55 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
+  // const handleSubmit = async (e: React.FormEvent) => {
+  //   e.preventDefault()
+  //   setIsSubmitting(true)
     
-    // Simple mailto implementation
-    const { name, email, subject, message } = formData
-    const mailtoUrl = `mailto:${personalInfo.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`From: ${name} (${email})\n\n${message}`)}`
+  //   // Simple mailto implementation
+  //   const { name, email, subject, message } = formData
+  //   const mailtoUrl = `mailto:${personalInfo.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`From: ${name} (${email})\n\n${message}`)}`
     
-    // Add a small delay to show loading state
-    setTimeout(() => {
-      window.location.href = mailtoUrl
-      setIsSubmitting(false)
-      setIsSubmitted(true)
+  //   // Add a small delay to show loading state
+  //   setTimeout(() => {
+  //     window.location.href = mailtoUrl
+  //     setIsSubmitting(false)
+  //     setIsSubmitted(true)
       
-      // Reset form after 3 seconds
-      setTimeout(() => {
-        setIsSubmitted(false)
-        setFormData({ name: '', email: '', subject: '', message: '' })
-      }, 3000)
-    }, 500)
+  //     // Reset form after 3 seconds
+  //     setTimeout(() => {
+  //       setIsSubmitted(false)
+  //       setFormData({ name: '', email: '', subject: '', message: '' })
+  //     }, 3000)
+  //   }, 500)
+  // }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault()
+  setIsSubmitting(true)
+  
+    try {
+      const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      })
+      
+      if (response.ok) {
+        setIsSubmitted(true)
+        setTimeout(() => {
+          setIsSubmitted(false)
+          setFormData({ name: '', email: '', subject: '', message: '' })
+        }, 3000)
+      } else {
+        throw new Error('Failed to send')
+      }
+    } catch (error) {
+      alert('Failed to send message. Please try again.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -45,6 +75,7 @@ export default function Contact() {
     }))
   }
 
+  
   return (
     <section id="contact" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
@@ -126,7 +157,13 @@ export default function Contact() {
                   </p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <form onSubmit={handleSubmit} 
+                  name="contact" 
+                  method="POST"
+                  data-netlify="true"
+                  netlify-honeypot="bot-field"
+                  className="space-y-4"
+                >
                   <div className="grid grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <label className="text-sm font-medium">Name</label>

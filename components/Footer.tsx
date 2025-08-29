@@ -89,6 +89,12 @@ export default function Footer() {
                 Skills
               </button>
               <button 
+                onClick={() => scrollToSection('certifications')}
+                className="text-sm text-muted-foreground hover:text-primary transition-colors text-left"
+              >
+                Certifications
+              </button>
+              <button 
                 onClick={() => scrollToSection('contact')}
                 className="text-sm text-muted-foreground hover:text-primary transition-colors text-left"
               >

@@ -48,6 +48,12 @@ export default function Header({ darkMode, toggleDarkMode }: HeaderProps) {
           >
             Skills
           </button>
+          <button
+            onClick={() => scrollToSection('certifications')}
+            className="text-sm font-medium hover:text-primary transition-colors"
+          >
+            Certifications
+          </button>
           <button 
             onClick={() => scrollToSection('contact')}
             className="text-sm font-medium hover:text-primary transition-colors"

@@ -3,9 +3,9 @@ export const personalInfo = {
   title: "Data Scientist & ML Engineer",
   location: "North Carolina, USA",
   workAuth: "Authorized to work in US",
-  email: "rajan.gurung@example.com",
-  linkedin: "https://linkedin.com/in/rajangurung",
-  github: "https://github.com/rajangurung",
+  email: "rajangurung7412@gmail.com",
+  linkedin: "https://www.linkedin.com/in/rajan-gurung-/",
+  github: "https://github.com/RazanGurung/RazanGurung/blob/main/README.md",
   summary: "Data Scientist and ML Engineer with 4+ years of experience developing AI-driven solutions, NLP pipelines, and big data applications. Skilled in deploying ML models into production, optimizing pipelines at scale, and delivering measurable business impact. Strong foundation in statistics, predictive modeling, and cloud-based MLOps."
 }
 
@@ -44,7 +44,7 @@ export const projects = [
     description: "Built classification pipeline for large-scale review data with improved F1 score by 15% on imbalanced classes, processing 50K+ reviews/day",
     impact: ["15% F1 improvement", "50K+ reviews/day", "Real-time inference"],
     techStack: ["Python", "PyTorch", "Hugging Face", "FastAPI", "AWS"],
-    repoLink: "https://github.com/rajangurung/sentiment-sleuth",
+    repoLink: "https://github.com/RazanGurung/Amazon-Review-Sentiment-Analysis",
     caseStudyLink: "#",
     featured: true
   },
@@ -55,7 +55,7 @@ export const projects = [
     description: "Deployed ML model for severity prediction with AUC = 0.89, reduced data prep time by 60% via PySpark pipelines",
     impact: ["AUC 0.89", "60% faster processing", "Scalable pipeline"],
     techStack: ["PySpark", "HDFS", "MLlib", "Plotly"],
-    repoLink: "https://github.com/rajangurung/accident-prediction",
+    repoLink: "https://github.com/RazanGurung/New-York-Accident-Prediction",
     caseStudyLink: "#",
     featured: true
   },

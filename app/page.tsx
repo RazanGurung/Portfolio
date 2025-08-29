@@ -13,6 +13,7 @@ import Footer from '../components/Footer'
 import { Button } from '../components/ui/button'
 import { ArrowUp } from 'lucide-react'
 import dynamic from 'next/dynamic'
+import Certifications from '../components/Certification'
 const InteractiveBackground = dynamic(() => import('../components/InteractiveBackground'), { ssr: false })
 const FloatingElements = dynamic(() => import('../components/FloatingElements'), { ssr: false })
 
@@ -101,6 +102,7 @@ export default function Home() {
         <Projects />
         <Experience />
         <Skills />
+        <Certifications/>
         <Contact />
         </main>
         <Footer />
