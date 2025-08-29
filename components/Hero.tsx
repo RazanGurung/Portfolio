@@ -67,8 +67,12 @@ export default function Hero() {
           <Card className="lg:sticky lg:top-24 animate-slide-in-left">
             <CardContent className="p-6 space-y-6">
               <div className="text-center space-y-2">
-                <div className="w-32 h-32 bg-gradient-to-br from-primary to-primary/60 rounded-full mx-auto flex items-center justify-center text-3xl font-bold text-primary-foreground">
-                  {personalInfo.name.split(' ').map(n => n[0]).join('')}
+                <div className="w-32 h-32 mx-auto">
+                  <img
+                    src="/profile.jpg" // 👈 your image file in /public
+                    alt={personalInfo.name}
+                    className="w-32 h-32 rounded-full object-cover border-2 border-primary/30 shadow-md"
+                  />
                 </div>
                 <h3 className="font-semibold text-lg">{personalInfo.name}</h3>
                 <p className="text-sm text-muted-foreground">{personalInfo.title}</p>

@@ -123,7 +123,7 @@ export default function Footer() {
               className="gap-2"
             >
               <Mail className="h-4 w-4" />
-              Let's Connect
+              Let&apos;s Connect
             </Button>
           </div>
         </div>
